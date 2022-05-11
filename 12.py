@@ -65,6 +65,8 @@ class LogicGate:
         else:
             result=0
         return y, result
+
+#AND
 xdata=np.array([[0,0],[0,1],[1,0],[1,1]])
 tdata=np.array([0,0,0,1])
 AND_obj= LogicGate("AND_GATE", xdata,tdata)
@@ -73,3 +75,34 @@ print(AND_obj.name,"\n")
 test_data=np.array([[0,0],[0,1],[1,0],[1,1]])
 for data in test_data:
     print(AND_obj.predict(data))
+
+#OR
+xdata=np.array([[0,0],[0,1],[1,0],[1,1]])
+tdata=np.array([0,0,0,1])
+OR_obj= LogicGate("OR_GATE", xdata,tdata)
+OR_obj.train()
+print(OR_obj.name,"\n")
+test_data=np.array([[0,0],[0,1],[1,0],[1,1]])
+for data in test_data:
+    print(OR_obj.predict(data))
+
+
+# #NAND
+# xdata=np.array([[0,0],[0,1],[1,0],[1,1]])
+# tdata=np.array([0,0,0,1])
+# NAND_obj= LogicGate("NAND_GATE", xdata,tdata)
+# NAND_obj.train()
+# print(NAND_obj.name,"\n")
+# test_data=np.array([[0,0],[0,1],[1,0],[1,1]])
+# for data in test_data:
+#     print(NAND_obj.predict(data))
+
+#XOR
+xdata=np.array([[0,0],[0,1],[1,0],[1,1]])
+tdata=np.array([0,0,0,1])
+XOR_obj= LogicGate("XOR_GATE", xdata,tdata)
+XOR_obj.train()
+print(XOR_obj.name,"\n")
+test_data=np.array([[0,0],[0,1],[1,0],[1,1]])
+for data in test_data:
+    print(XOR_obj.predict(data))
